@@ -1,0 +1,22 @@
+import spa.*
+
+test "Atender Ramiro, Ramiro baja 3 contractura y sin piel grasosa" {
+	spa.atender(ramiro)
+	assert.equals(0, ramiro.contracturado())
+	assert.equals(false, ramiro.pielGrasosa())
+}
+
+test "Atender a todo el mundo: Olivia y Bruno " {
+	spa.atender(olivia)
+	spa.atender(bruno)
+	assert.equals(9, olivia.concentracion())
+	assert.equals(true, bruno.feliz())
+	assert.equals(54500, bruno.peso())
+}
+
+
+test "Olivia x2" {
+	spa.atender(olivia)
+	spa.atender(olivia)
+	assert.equals(15, olivia.concentracion())
+}
